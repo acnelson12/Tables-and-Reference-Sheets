@@ -1,0 +1,28 @@
+\usepackage[latin1]{inputenc}
+\usepackage[paperwidth=5.5in, paperheight=8.5in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{longtable}
+\usepackage{multicol}
+
+\newcounter{NumberInTable}
+
+\newcommand{\TNUM}{\stepcounter{NumberInTable}{(\theNumberInTable)}}
+
+\newcommand{\Laplace}[1]{\ensuremath{\mathcal{L}{\left\{#1\right\}}}}
+\newcommand{\InvLap}[1]{\ensuremath{\mathcal{L}^{-1}{\left\{#1\right\}}}}
+\newcommand{\Fourier}[1]{\ensuremath{\mathcal{F}{\left\{#1\right\}}}}
+\newcommand{\InvFourier}[1]{\ensuremath{\mathcal{F}^{-1}{\left\{#1\right\}}}}
+\newcommand{\FourierS}[1]{\ensuremath{\mathcal{F}_\mathrm{s}{\left\{#1\right\}}}}
+\newcommand{\FourierC}[1]{\ensuremath{\mathcal{F}_\mathrm{c}{\left\{#1\right\}}}}
+\newcommand{\im}{\mathrm{i}} % Imaginary unit
+\newcommand{\e}{\mathrm{e}}  % Euler's number
+\newcommand{\nIsPos}{($n=1,2,\cdots$)}
+\DeclareMathOperator{\dif}{d \!} % Differential (upface d)
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\erfc}{erfc}
+\DeclareMathOperator{\ustep}{\mathcal{U}}
