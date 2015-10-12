@@ -1,0 +1,61 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage{mystyle}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+\begin{LARGE}
+Table of Laplace Transforms
+\end{LARGE}
+\end{center}
+
+$$
+\Laplace{f(t)} = \int_0^\infty \e^{-st}f(t)\dif t
+$$
+
+\begin{center}
+\begin{longtable}{r|l|l}
+       & $ f(t)=\InvLap{F(s)} $      & $\Laplace{f(t)} = F(s)$           \\
+\hline                                                                      & \endhead
+\TNUM & $ 1 $                       & $ \dfrac{1}{s} $                  \\ & \\
+\TNUM & $ t $                       & $ \dfrac{1}{s^2} $                \\ & \\
+\TNUM & $ \dfrac{t^{n-1}}{(n-1)!} $ & $ \dfrac{1}{s^n}$                 \\ & \\
+\TNUM & $ \dfrac{1}{\sqrt{\pi t}} $ & $ \dfrac{1}{s}$                   \\ & \\
+\TNUM & $ 2\sqrt{\dfrac{t}{\pi}} $  & $ s^{-\frac{2}{3}}$               \\ & \\
+\TNUM & $ \dfrac{2^nt^{n-\frac{1}{2}}}{1\cdot 3\cdot 5\cdots (2n-1)\sqrt{\pi}}$ & $s^{-(n+\frac{1}{2})}$ \\ & \\
+\TNUM & $ t^{k-1} $                 & $ \dfrac{\Gamma(k)}{s^k}$ ($k>0$) \\ & \\
+\TNUM & $ \e^{at} $                 & $ \dfrac{1}{s-a} $                \\ & \\
+\TNUM & $ t\e^{at} $                & $ \dfrac{1}{(s-a)^2} $            \\ & \\
+\TNUM & $ t^n\e^{at} $              & $ \dfrac{n!}{(s-a)^{n+1}} $       \\ %& \\
+\TNUM & $ t^k\e^{at} $              & $ \dfrac{\Gamma(k+1)}{(s-a)^{k+1}} $ \\ & \\
+\TNUM & $ \dfrac{1}{a-b}(\e^{at} - \e^{bt}) $ & $ \dfrac{1}{(s-a)(s-b)} $  \\ & \\
+\TNUM & $ \dfrac{1}{a-b}(a\e^{at} - b\e^{bt}) $ & $ \dfrac{s}{(s-a)(s-b)} $  \\ & \\
+& $ \quad(b-c)\e^{at}+(c-a)\e^{bt} $ & \\
+\TNUM & $ -\dfrac{\quad\quad\quad\quad\quad+(a-b)\e^{ct}}{(a-b)(b-c)(c-a)} $ & $ \dfrac{1}{(s-a)(s-b)(s-c)} $  \\ & \\
+\TNUM & $ \sin(at) $                & $ \dfrac{a}{s^2+a^2} $            \\ & \\
+\TNUM & $ \cos(at) $                & $ \dfrac{s}{s^2+a^2} $            \\ & \\
+\TNUM & $ \sinh(at) $               & $ \dfrac{a}{s^2-a^2} $            \\ & \\
+\TNUM & $ \cosh(at) $               & $ \dfrac{s}{s^2-a^2} $            \\ & \\
+\TNUM & $ \dfrac{1-\cos(at)}{a^2} $ & $ \dfrac{1}{s\left(s^2+a^2\right)} $ \\ & \\
+\TNUM & $ \dfrac{at-\sin(at)}{a^3} $ & $ \dfrac{1}{s^2(s^2+a^2)} $      \\ & \\
+\TNUM & $ \dfrac{\sin(at)-at\cos(at)}{2a^3} $ & $ \dfrac{1}{(s^2+a^2)^2} $ \\ & \\
+\TNUM & $ t\sin(at) $               & $ \dfrac{2as}{(s^2+a^2)^2} $      \\ %& \\
+\TNUM & $ \dfrac{\sin(at)+at\cos(at)}{2a} $ & $ \dfrac{s^2}{(s^2+a^2)^2} $ \\ & \\
+\TNUM & $ t\cos(at) $               & $ \dfrac{s^2-a^2}{(s^2+a^2)^2} $  \\ & \\
+\TNUM & $ \dfrac{\cos(at) - \cos(bt)}{b^2-a^2} $ & $ \dfrac{s}{(s^2+a^2)(s^2+b^2)}\; (a^2\neq b^2) $ \\ & \\
+\TNUM & $ \e^{at}\sin(bt) $         & $ \dfrac{b}{(s-a)^2+b^2} $        \\ & \\
+\TNUM & $ \e^{at}\cos(bt) $         & $ \dfrac{s-a}{(s-a)^2+b^2} $      \\ & \\
+%
+\TNUM & $ t\e^{at}\sin(bt) $        & $ \dfrac{2(s-a)b}{\left((s-a)^2 + b^2\right)^2} $ \\ & \\
+\TNUM & $ t\e^{at}\cos(bt) $        & $ \dfrac{(s-a)^2 - b^2}{\left((s-a)^2 + b^2\right)^2} $ \\ & \\
+\TNUM & $ \delta(t-c) $             & $ \e^{cs} $                       \\ & \\
+\TNUM & $ \ustep(t-c)f(t-c) $       & $ \e^{cs}\Laplace{f(t)} $         \\ & \\
+\TNUM & $ f^\prime(t) $             & $ s\Laplace{f(t)} - f(0) $        \\ & \\
+\TNUM & $ f^{(n)}(t) $              & $ s^n\Laplace{f(t)} - s^{n-1}f(0) - s^{n-2}f^\prime(0) - $ \\ % & \\
+&                                   & $ \cdots - f^{(n-1)}(0) $ \\ & \\
+\TNUM & $ \displaystyle{ \int_0^t f(t-T)g(T)\dif T } $ & $ \Laplace{f(t)}\Laplace{g(t)} $ \\ & \\
+\end{longtable}
+\end{center}
+
+\end{document}
