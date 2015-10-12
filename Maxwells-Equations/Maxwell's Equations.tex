@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{esint}
+\usepackage[paperwidth=5.5in, paperheight=8.5in]{geometry}
+
+% Bold italic vectors
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+% Differential (upface d)
+\DeclareMathOperator{\dif}{d \!}
+
+\begin{document}
+
+\section*{Maxwell's Equations}
+
+\subsection*{Gauss's Law}
+The electric field leaving a volume is proportional to the charge inside.
+$$ \oiint_{\partial \Omega} \vect{E} \cdot \dif \vect{S}
+= \frac{1}{\varepsilon_0}\iiint_\Omega \rho \dif V $$
+$$ \nabla \cdot \vect{E} = \frac{\rho}{\varepsilon_0}$$
+
+\subsection*{Gauss's Law for Magnetism}
+There are no magnetic monopoles; the total magnetic flux piercing a closed surface is zero.
+$$ \oiint_{\partial \Omega} \vect{B} \cdot \dif \vect{S} = 0 $$
+$$ \nabla \cdot \vect{B} = 0 $$
+
+\subsection*{Maxwell-Faraday Equation \\ (Faraday's Law of Induction)}
+The voltage accumulated around a closed circuit is proportional to the time rate of change of the magnetic flux it encloses.
+$$ \oint_{\partial \Sigma} \vect{E} \cdot \dif \vect{\ell}
+= -\frac{\dif}{\dif t}\iint_\Sigma \vect{B} \cdot \dif \vect{S} $$
+$$ \nabla \times \vect{E} = -\frac{\partial \vect{B}}{\partial t} $$
+
+\begin{samepage}
+\subsection*{Amp\`ere's Circuital Law \\ (with Maxwell's addition)}
+Electric currents and changes in electric fields are proportional to the magnetic field circulating about the area they pierce.
+$$ \oint_{\partial \Sigma} \vect{B} \cdot \dif \vect{\ell}
+= \mu_0 \iint_\Sigma \vect{J} \cdot \dif \vect{S} +
+\mu_0 \varepsilon_0 \frac{\dif}{\dif t}\iint_\Sigma \vect{E}
+\cdot \dif \vect{S} $$
+$$ \nabla \times \vect{B} = \mu_0 \left( \vect{J} + \varepsilon_0 \frac{\partial \vect{E}}{\partial t} \right)$$
+\end{samepage}
+
+\section*{Lorentz Force Law}
+If a particle of charge $q$ moves with velocity $\vect{v}$ in the presence of an electric field $\vect{E}$ and a magnetic field $\vect{B}$, then it will experience a force
+$$ \vect{F} = q\left[\vect{E}+\vect{v}\times\vect{B}\right]. $$
+
+\end{document}
